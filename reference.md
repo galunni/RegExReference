@@ -150,8 +150,68 @@ like [^0-9]
 
 ---
 
-**\S -	something that is not a \s**
+**\S -	something that is not a \s**<br/>
 like [^\s]
 
 ---
+
+**-	- defines a range**<br/>
+- has this meaning just in a class
+```perl
+echo "5" | perl -ne 'print if(/[4-6]/);' # output: 5
+```
+```perl
+echo "5" | perl -ne 'print if(/[6-8]/);' # output:
+echo "5" | perl -ne 'print if(/[3-40]/);' # output:
+```
+
+---
+
+**\l \u	- fold next character's case**<br/>
+lowercase / uppercase next char
+```perl
+echo "AbC" | perl -pe 's/A\lBC/X/;' #output: X
+```
+
+---
+
+***\Q....\E	- Literal text span***<br/>
+\Q turns off every metachar, until \E - Supported only by java and perl - VB uses Regex.escape method instead
+```perl
+echo "[" | perl -pe 's/\Q[/X/;' # output: X
+echo "[g" | perl -pe 's/\Q[\E[a-z]*/X/;' # output: X
+````
+
+---
+
+**\U \L ... \E	- Case folding span**
+useful to turn upper/lower case on/off on the fly - Make sense used with variables
+```perl
+echo "abcde" | perl -ne '$a="CD";print if/ab\L$a\Ee/;' # output: abcde
+````
+
+---
+
+**\*	- quantifier: some, one or no one**</br>
+```perl
+echo "13" | perl -ne 'print if(/12*3/);' # output 13
+echo "1222223" | perl -ne 'print if(/12*3/);' # output: 1222223
+```
+
+---
+
+**?	- quantifier: one or no one	**<br/>
+```perl
+echo "13" | perl -ne 'print if(/12?3/);' output: 13
+echo "123" | perl -ne 'print if(/12?3/);' # output: 123
+```
+
+---
+
+**+	- some, or at less one**<br/>
+x+ means the same as xx*
+```perl
+echo "12223" | perl -ne 'print if(/12+3/);' # output: 12223
+echo "123" | perl -ne 'print if(/12+3/);' # output: 123
+```
 
