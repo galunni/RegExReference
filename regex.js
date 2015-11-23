@@ -1,7 +1,8 @@
 // regex.js
 // giovanni 2015
+// making use of the javascript regex engine to test a regular expression on a given text input
 
-// beta version on:
+// beta version installed on:
 // http://galunni.github.io/tools/regex_tester.html
 
 var testo = "";
@@ -35,6 +36,7 @@ function getFlags()
     
   return flags;
 }
+
 function matchIt()
 {
    var rr = 
