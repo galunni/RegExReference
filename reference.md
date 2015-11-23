@@ -53,7 +53,7 @@ like [ \t\n\r] - doesn't match a \v (vertical tab)<br/>
 echo "1 2" | perl -ne 'print if(/\s/);' # output: 1 2
 ```
 
-***\b \B word boundary (or not)**<br/>
+**\b \B word boundary (or not)**<br/>
 since perl 5.8: fully support unicode - matches just a position not a char!! - means backspace if used in a class<br/>
 egrep (usually): \< (begin) \>(end)
 ```perl
