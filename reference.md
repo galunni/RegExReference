@@ -86,15 +86,72 @@ not so smart if using utf-8 - lookbehind still not supported
 
 ---
 
-**$ \Z \z	end of a line/string**<br/>
+**$ \Z \z	- end of a line/string**<br/>
 \Z does not respect the m mode -\z matches just after the last \n and not before
 ```perl
-echo "duc" | perl -ne 'print if(/c$/);'
-echo "duc" | perl -ne 'print if(/c\Z/);'
-echo "duc" | perl -ne 'print if(/c\n\Z/);'
-echo "duc" | perl -ne 'print if(/c\n\z/);'
+echo "duc" | perl -ne 'print if(/c$/);' # output: duc
+echo "duc" | perl -ne 'print if(/c\Z/);' # output: duc
+echo "duc" | perl -ne 'print if(/c\n\Z/);' # output: duc
+echo "duc" | perl -ne 'print if(/c\n\z/);' # output: duc
 ```
 ```perl
-echo "duc" | perl -ne 'print if(/c\z/);'
+echo "duc" | perl -ne 'print if(/c\z/);' # output:
 ```
+
+---
+
+**| - alternate**<br/>
+```perl
+echo "a" | perl -ne 'print if(/a|b/);' # output: a
+```
+```perl
+echo "d" | perl -ne 'print if(/a|b|c/);' # output:
+```
+
+---
+
+**[ ] - create a class**<br/>
+inside a class only ^ and - are metachars
+```perl
+echo "a" | perl -ne 'print if(/[ab]/);' # output: a
+```
+```perl
+echo "A" | perl -ne 'print if(/[ab]/);' # output:
+```
+```perl
+echo "ca" | perl -ne 'print if(/[[a-z]&&[^aeiou]]/);');' # this only works in java regex engine
+
+#for doing the same in perl use lookarounds: 
+echo "ca" | perl -ne 'print if(/(?![aeiou])[a-z]/);' + output: ca
+```
+
+---
+
+**^ - something not in the class**<br/>
+Meaning of [^x] -> Match unless there is an x
+^ has a different meaning out of a class (as explained above)
+
+```perl
+echo "Ce" | perl -ne 'print if(/C[^abc]/);' # output: Ce
+```
+```perl
+echo -n "C" | perl -ne 'print if(/C[^ABC]/);' # output:
+```
+
+---
+
+**\W	- something that is not an alphanumeric char**<br/>
+same as [^a-zA-Z0-9_] and eventually unicode letters depending on your local environmen
+
+---
+
+**\D	- something that is not a number**<br/>
+like [^0-9]
+
+---
+
+**\S -	something that is not a \s**
+like [^\s]
+
+---
 
