@@ -45,4 +45,25 @@ echo "abbbbbc" | perl -ne 'print if(/ab{2,4}c/);' # output:
 ---
 
 **( ) -	delimit the value of a quantifier**<br/>
-() are also used for many other reasons such as 
+() are also used for many other reasons such as alternate, backreferences and so on...
+```perl
+echo "abababc" | perl -ne 'print if(/(ab){3}c/);' # output: abababc
+```
+
+---
+
+**\*? +? ?? {min,max}? - lazy quantifiers**<br/>
+Quantifiers are normally greedy. Lazy quantifiers prefer a shorter match to a longer one.
+```perl
+echo "-how to-disappear-" | perl -pe 's/-[^-]+-/-X-/;' # output: -X-disappear-
+```
+
+---
+
+**?+ ++ *+ {min,max}+ - possessive quantifiers**<br/>
+```perl
+like greedy quantifiers BUT  they don't allow backtracking to their match (increase speed)<br/>
+only supported in Java & PCRE, not supported in perl 5.8.0 (use atomic grouping instead)
+```
+
+
