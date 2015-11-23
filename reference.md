@@ -4,6 +4,7 @@ Regular Expression Reference
 ---
 PCRE compared to other flavors
 
+META CHARS SOFT
 ---
 
 **. - single dot**<br/>
@@ -190,6 +191,7 @@ useful to turn upper/lower case on/off on the fly - Make sense used with variabl
 echo "abcde" | perl -ne '$a="CD";print if/ab\L$a\Ee/;' # output: abcde
 ````
 
+QUANTIFIERS
 ---
 
 **\*	- quantifier: some, one or no one**</br>
@@ -200,7 +202,7 @@ echo "1222223" | perl -ne 'print if(/12*3/);' # output: 1222223
 
 ---
 
-**?	- quantifier: one or no one	**<br/>
+**?	- quantifier: one or no one**<br/>
 ```perl
 echo "13" | perl -ne 'print if(/12?3/);' output: 13
 echo "123" | perl -ne 'print if(/12?3/);' # output: 123
@@ -214,4 +216,21 @@ x+ means the same as xx*
 echo "12223" | perl -ne 'print if(/12+3/);' # output: 12223
 echo "123" | perl -ne 'print if(/12+3/);' # output: 123
 ```
+
+---
+
+**{ }	- quantifier: a number of	{exactly} {min,max} {min,}**<br/> 
+The min is required, the max allowed
+```perl
+echo "abbc" | perl -ne 'print if(/ab{2}c/);' # output: abbc
+echo "abbbbbc" | perl -ne 'print if(/ab{3,}c/);' # output: abbbbbc
+```
+```perl
+echo "abbbbbc" | perl -ne 'print if(/ab{2,4}c/);' # output:
+```
+
+---
+
+**( ) -	delimit the value of a quantifier**<br/>
+() are also used for many other reasons such as 
 
