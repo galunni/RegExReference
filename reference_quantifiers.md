@@ -61,9 +61,8 @@ echo "-how to-disappear-" | perl -pe 's/-[^-]+-/-X-/;' # output: -X-disappear-
 ---
 
 **?+ ++ *+ {min,max}+ - possessive quantifiers**<br/>
-```perl
 like greedy quantifiers BUT  they don't allow backtracking to their match (increase speed)<br/>
 only supported in Java & PCRE, not supported in perl 5.8.0 (use atomic grouping instead)
-```
+
 
 
