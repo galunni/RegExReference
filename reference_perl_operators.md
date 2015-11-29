@@ -49,7 +49,7 @@ echo "a*b+c/d&e" | perl -pe 's#[*+/&]#X#g;'    #output: aXbXcXdXe
 ---
 
 **built in variable**</br>
-$`	text before match</br>
+$\`	text before match</br>
 $&	text matched</br>
 $'	text after match</br>
 $1	text matched with first parentheses</br>
