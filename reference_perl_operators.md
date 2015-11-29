@@ -13,7 +13,7 @@ Perl specific operators
 substitute and (if needed) gives back how often the match has been substituted
 ```perl
 echo "superman" | perl -pe 's/man/woman/;' # output: superwoman
-echo "abc" | perl -pe 'print s/ab/X/;' # output: 1Xc
+echo "abc" | perl -pe 'print s/ab/X/;'     # output: 1Xc
 echo "abcdabdeab" | perl -pe '$a= s/ab/X/g; print "---$a---\n";'
 # output:
 # ---3---
