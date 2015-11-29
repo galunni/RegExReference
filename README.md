@@ -9,8 +9,7 @@ make use of the javascript regex engine to develop and test a regex on a given i
 
 ---
 
-**reference_chars_soft.md**</br>
-code example for the following meta character:</br>
+**reference_chars_soft.md** code examples for the following meta character:</br>
 . single dot,\ escape chars, \w alphanumeric char, \d one number, \s spaces, 
 \b \B word boundaries, \C forced match of single byte (char), ^ \A begin of a line,
 $ \Z \z end of a line/string, | alternate, [ ] char class, ^ negative class,
