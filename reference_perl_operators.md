@@ -41,10 +41,12 @@ echo "p.*" | perl -pe 'tr/p.*/P?+/;'      # output: P?+
 **regex delimiter - how can I delimit my regex /.../**</br>
 / works, but you can use almost every non alphanumeric simple visible ascii char</br>
 the reason can be: save as many backslashes as possible</br>
+```perl
 echo "a&b&c" | perl -pe 's/&/X/g;'             # output: aXbXc
 echo "a/b/c" | perl -pe 's&/&X&g;'             # output: aXbXc
 echo "a/b/c" | perl -pe 's+/+X+g;'             # output: aXbXc
 echo "a*b+c/d&e" | perl -pe 's#[*+/&]#X#g;'    #output: aXbXcXdXe
+```
 
 ---
 
