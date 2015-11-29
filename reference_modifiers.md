@@ -109,6 +109,15 @@ print $_;
 
 ---
 
+**e - execute**</br>
+executes the content, even multiple times
+```perl
+echo "time" | perl -pe 's/time/localtime/e;'            # output: Sun Nov 29 17:17:22 2015
+echo "A" | perl -pe '$var = "ord($1);"; s/(A)/$var/ee;' # output: 65
+```
+
+---
+
 **c in gc - keeps the current position during repeated matching**</br>
 
 ```perl
@@ -151,10 +160,3 @@ In the example above \G forces the second regex to start matching just at the en
 g modifier necessary for this to work. 
 
 ---
-
-**e - execute**</br>
-executes the content, even multiple times
-```perl
-echo "time" | perl -pe 's/time/localtime/e;'            # output: Sun Nov 29 17:17:22 2015
-echo "A" | perl -pe '$var = "ord($1);"; s/(A)/$var/ee;' # output: 65
-```
