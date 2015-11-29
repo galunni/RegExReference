@@ -7,6 +7,9 @@ Perl specific operators
 ---
 
 **m/regex/mods - simple match**</br>
+```perl
+echo "Russia" | perl -ne 'print "yes\n" if(/russ/i);'
+```
 
 ---
 **s/regex/replacement/mods	- substitute (or count)**</br>
