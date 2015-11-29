@@ -147,7 +147,7 @@ echo "the-dog" | perl -ne 'if(/the/g){if(/\Gdog/){print "following\n";} else {pr
 # output: not following
 ```
 
-In the example above \G forces the second regex to start matching just at the end of the first regex.
+In the example above \G forces the second regex to start matching just at the end of the first regex.</br>
 g modifier necessary for this to work. 
 
 ---
