@@ -9,7 +9,7 @@ Regular Expressions reference and tools
 
 ---
 
-**reference_chars_soft.md**</br>
+**[reference_chars_soft.md](./reference_chars_soft.md)**</br>
 code examples for the following meta characters:</br>
 - . single dot
 - \ escape chars
@@ -30,7 +30,7 @@ code examples for the following meta characters:</br>
 - \Q....\E Literal text span
 
 
-**reference_modifiers.md**</br>
+**[reference_modifiers.md](./reference_modifiers.md)**</br>
 code examples for the following regex modifiers:</br>
 - g global match
 - i	ignore case
@@ -42,7 +42,7 @@ code examples for the following regex modifiers:</br>
 - c in gc keeps the current position during repeated matching
 - \G start of match / end of previous match
 
-**reference_parenthesis_operators.md**</br>
+**[reference_parenthesis_operators.md](./reference_parenthesis_operators.md)**</br>
 code examples for the following parenthesis operators:</br>
 - (?:...) - turn off backreferences
 - (?modifier-modifier) - turn on/off modifier
@@ -57,7 +57,7 @@ code examples for the following parenthesis operators:</br>
 - (?if then|else) - conditional
 - (?>...) - atomic grouping
 
-**reference_quantifiers.md**</br>
+**[reference_quantifiers.md](reference_quantifiers.md)**</br>
 code examples for the following quantifiers</br>
 - * some, one or no one
 - ? one or no one
@@ -67,7 +67,7 @@ code examples for the following quantifiers</br>
 - *? +? ?? {min,max}? lazy quantifiers
 - ?+ ++ *+ {min,max}+ possessive quantifiers
 
-**reference_perl_operators.md**</br>
+**[reference_perl_operators.md](reference_perl_operators.md)**</br>
 code examples of specific regex use in perl</br>
 - m/regex/mods simple match
 - s/regex/replacement/mods substitute (or count)
