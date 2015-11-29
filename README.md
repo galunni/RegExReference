@@ -10,7 +10,7 @@ Regular Expressions reference and tools
 ---
 
 **reference_chars_soft.md**</br>
-code examples for the following meta character:</br>
+code examples for the following meta characters:</br>
 - . single dot
 - \ escape chars
 - \w alphanumeric char
@@ -68,7 +68,7 @@ code examples for the following quantifiers</br>
 - ?+ ++ *+ {min,max}+ possessive quantifiers
 
 **reference_perl_operators.md**</br>
-code example of specific regex use in perl</br>
+code examples of specific regex use in perl</br>
 - m/regex/mods simple match
 - s/regex/replacement/mods substitute (or count)
 - tr/before/after/ transliteration operator
