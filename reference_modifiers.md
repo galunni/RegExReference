@@ -121,7 +121,7 @@ echo "A" | perl -pe '$var = "ord($1);"; s/(A)/$var/ee;' # output: 65
 **c in gc - keeps the current position during repeated matching**</br>
 
 ```perl
-# notice how in this case using the gc mofifier after the first regex the pos() is setted to 4 and
+# notice how in this case using the gc modifier after the first regex the pos() is setted to 4 and
 # how the second regex only outputs one "a" (the last one in the string)
 echo "mamma" |
 perl -ne 'while(/m/gc) {print $& . pos() . "-";} print "after: " . pos() . "\n"; while(/a/g) {print $&;}'
