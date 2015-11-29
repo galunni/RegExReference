@@ -131,5 +131,19 @@ perl -ne 'while(/m/g) {print $& . pos() . "-";} print "after: " . pos() . "\n"; 
 
 in other words using the gc modifiers the pos() is not resetted after a failure match and the second regex starts when the first one failed
 
+In a similar way you can use \G inside a regex instead of the gc modifier:
+
+```perl
+echo "the-dog" | perl -ne 'if(/the-/g){if(/\Gdog/){print "following\n";} else {print "not following";}}'
+# output: following
+```
+
+```perl
+echo "the-dog" | perl -ne 'if(/the/g){if(/\Gdog/){print "following\n";} else {print "not following";}}'
+# output: not following
+```
+
+In the example above \G forces the second regex to start matching just at the end of the first regex.
+g modifier necessary for this to work. 
 ---
 
