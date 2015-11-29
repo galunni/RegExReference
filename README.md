@@ -4,7 +4,7 @@ Regular Expressions reference and tools
 
 ---
 
-**regex.js**</br>
+**[regex.js](./regex.js)**</br>
 - making use of the javascript regex engine to test a regular expression on a given text input
 
 ---
