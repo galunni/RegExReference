@@ -38,6 +38,13 @@ echo "" | perl -ne 'print "no\n" unless/./;' # output: no
 
 ---
 
+**m	- multiline match**</br>
+if used ^ and $ also match begin and end of a line</br>
+does not influences \A and \Z</br>
+in perl overwrites the $* var
+
+---
+
 **o -	compile only once**</br>
 Makes the regex execution faster.</br>
 Do not use this operator if the RegEx contain a variable which is changing when using the RegEx a second time.</br>
