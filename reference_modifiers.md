@@ -109,7 +109,7 @@ print $_;
 
 ---
 
-**c in gc - keep the current position during repeated matching**</br>
+**c in gc - keeps the current position during repeated matching**</br>
 
 ```perl
 # notice how in this case using gc mofifier after the first regex the pos() is setted to 4 and
