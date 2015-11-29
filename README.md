@@ -16,3 +16,10 @@ $ \Z \z end of a line/string, | alternate, [ ] char class, ^ negative class,
 \W not alphanumeric char, \D not a number, \S not a \s, - class defines a range,
 \l \u fold next character's case, \Q....\E Literal text span, 
 
+
+**reference_modifiers.md** code examples for the following regex modifiers:</br>
+g global match, i	ignore case, s single line, m multiline, 
+o compile once, x	extended free spaces and comments mode, e execute,
+c in gc keeps the current position during repeated matching,
+\G start of match / end of previous match
+
