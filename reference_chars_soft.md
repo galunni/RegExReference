@@ -8,7 +8,7 @@ META CHARS SOFT
 ---
 
 **. - single dot**<br/>
-one char - it may not mach a newline (depending on s modifiert settings) - like ? in the bash
+one char - it may not mach a newline (depending on s modifier settings) - like ? in the bash
 ```perl
 echo "a" | perl -ne 'print if/a/;' # output: a
 ```
