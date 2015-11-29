@@ -61,20 +61,34 @@ echo "Max Mad" | perl -pe 's/Max(?! Good)/Marc/g;'     # output: Marc Mad
 
 ---
 
-***(?<=...)	- positive lookbehind**</br>
+**(?<=...)	- positive lookbehind**</br>
 match but do not consume</br>
 only support static length regex</br>
 ```perl
-echo "ab cd ab ef" | perl -pe 's/(?<=cd )ab/X/g;'     # output: ab cd X ef
-echo "ab cd ab ef" | perl -pe 's/ab(?<=cd ab)/X/g;'   # output: ab cd X ef
-echo "Jeffs" | perl -pe 's/(?<=\bJeff)(?=s\b)/`/;'    # output: Jeff`s
-echo "Jeffs" | perl -pe 's/(?=s\b)(?<=\bJeff)/`/;'    # output: Jeff`s
+echo "ab cd ab ef" | perl -pe 's/(?<=cd )ab/X/g;'           # output: ab cd X ef
+echo "ab cd ab ef" | perl -pe 's/ab(?<=cd ab)/X/g;'         # output: ab cd X ef
+echo "Jeffs" | perl -pe 's/(?<=\bJeff)(?=s\b)/`/;'          # output: Jeff`s
+echo "Jeffs" | perl -pe 's/(?=s\b)(?<=\bJeff)/`/;'          # output: Jeff`s
+echo "12345678"|perl -pe 's/(?<=\d)(?=(?:\d{3})+$)/./g;'    # output: 12.345.678
 ```
 
 ```perl
-echo "12345678"|perl -pe 's/(?<=\d)(?=(?:\d{3})+$)/./g;'	echo "ab cd ab ef" | perl -pe 's/ab(?<=cd )/X/;'
-*echo "ab cd ab ef" | perl -pe 's/(?<=cd +)ab/X/g;' #only static length
+echo "ab cd ab ef" | perl -pe 's/ab(?<=cd )/X/;'            # output: ab cd ab ef
+echo "ab cd ab ef" | perl -pe 's/(?<=cd +)ab/X/g;'          # error in perl only static length is supported!
+# Variable length lookbehind not implemented in regex m/(?<=cd +)ab/ at -e line 1.
 ```
 
 ---
+
+**(?<!...) - negative lookbehind**</br>
+match but do not consume</br>
+only support static length regex
+```perl
+echo "abac" | perl -pe 's/(?<!b)a/X/g;'    # output: Xbac
+echo "abac" | perl -pe 's/(?<!^)a/X/g;'    # output: abXc
+echo "abac" | perl -pe 's/(?<!c)a/X/g;'    # output: XbXc
+```
+
+---
+
 
