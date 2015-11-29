@@ -142,7 +142,7 @@ echo -n "C" | perl -ne 'print if(/C[^ABC]/);' # output:
 ---
 
 **\W	- something that is not an alphanumeric char**<br/>
-same as [^a-zA-Z0-9_] and eventually unicode letters depending on your local environmen
+same as [^a-zA-Z0-9_] and eventually unicode letters depending on your local environment
 
 ---
 
