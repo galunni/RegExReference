@@ -53,4 +53,27 @@ right position for the substitution.
 
 ---
 
+**(?!...)	- negative lookahead**</br>
+negative match but do not consume</br>
+echo "Max Mad" | perl -pe 's/Max(?! Good)/Marc/g;'     # output: Marc Mad
+```
+
+---
+
+***(?<=...)	- positive lookbehind**</br>
+match but do not consume</br>
+only support static length regex</br>
+```perl
+echo "ab cd ab ef" | perl -pe 's/(?<=cd )ab/X/g;'     # output: ab cd X ef
+echo "ab cd ab ef" | perl -pe 's/ab(?<=cd ab)/X/g;'   # output: ab cd X ef
+echo "Jeffs" | perl -pe 's/(?<=\bJeff)(?=s\b)/`/;'    # output: Jeff`s
+echo "Jeffs" | perl -pe 's/(?=s\b)(?<=\bJeff)/`/;'    # output: Jeff`s
+```
+
+```perl
+echo "12345678"|perl -pe 's/(?<=\d)(?=(?:\d{3})+$)/./g;'	echo "ab cd ab ef" | perl -pe 's/ab(?<=cd )/X/;'
+*echo "ab cd ab ef" | perl -pe 's/(?<=cd +)ab/X/g;' #only static length
+```
+
+---
 
