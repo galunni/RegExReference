@@ -5,7 +5,7 @@ Regular Expressions reference and tools
 ---
 
 **regex.js**</br>
-- make use of the javascript regex engine to develop and test a regex on a given input text
+- making use of the javascript regex engine to test a regular expression on a given text input
 
 ---
 
