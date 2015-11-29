@@ -24,16 +24,16 @@ c in gc keeps the current position during repeated matching,
 \G start of match / end of previous match
 
 **reference_parenthesis_operators.md** code examples for the following parenthesis operators:</br>
-(?:...) - turn off backreferences</br>
-(?modifier-modifier) - turn on/off modifier</br>
-(?modifier-modifier:....) - modifier span</br>
-(?=...) - positive lookahead</br>
-(?!...) - negative lookahead</br>
-(?<=...) - positive lookbehind</br>
-(?<!...) - negative lookbehind</br>
-(?...) - named capture</br>
-(?{...}) - insert perl code</br>
-(??{...}) - dynamic regex</br>
-(?if then|else) - conditional</br>
-(?>...) - atomic grouping</br>
+- (?:...) - turn off backreferences</br>
+- (?modifier-modifier) - turn on/off modifier</br>
+- (?modifier-modifier:....) - modifier span</br>
+- (?=...) - positive lookahead</br>
+- (?!...) - negative lookahead</br>
+- (?<=...) - positive lookbehind</br>
+- (?<!...) - negative lookbehind</br>
+- (?...) - named capture</br>
+- (?{...}) - insert perl code</br>
+- (??{...}) - dynamic regex</br>
+- (?if then|else) - conditional</br>
+- (?>...) - atomic grouping</br>
 
