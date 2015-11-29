@@ -153,7 +153,9 @@ perl -le 'print $& if "abcd" =~ /(?>\w+)d/'   # output:
 ```
 The example above uses atomic grouping.</br>
 The \w matches every letter in abcd to the end of the string.</br>
-Since backtracking is not allowed, when trying to match d the regex fails.
+Since backtracking is not allowed, when trying to match d the regex fails.</br>
+About atomic is not about matching faster, but if it has to fail, it fails faster.</br>
+Unallowing backtracking, you could let a regex fail, that normally would match (as in the last example).
 
 ---
 
