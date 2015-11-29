@@ -63,3 +63,13 @@ Regular Expressions reference and tools
 - *? +? ?? {min,max}? lazy quantifiers
 - ?+ ++ *+ {min,max}+ possessive quantifiers
 
+**reference_perl_operators.md code example of specific regex use in perl**
+- m/regex/mods simple match
+- s/regex/replacement/mods substitute (or count)
+- tr/before/after/ transliteration operator
+- =~ !~ positive and negative match operators
+- regex delimiters
+- built in variables:  $` $& $' $1 $2 $+ $^N @- @+
+- pos()
+- (X|Y) - alternation priority
+- study()
