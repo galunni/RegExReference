@@ -48,7 +48,7 @@ in perl overwrites the $* var
 **o -	compile only once**</br>
 Makes the regex execution faster.</br>
 Do not use this operator if the RegEx contain a variable which is changing when using the RegEx a second time.</br>
-If your RegEx doesn't contain variables, the modificator o is automatically on.</br>
+If your RegEx doesn't contain variables, the modifier o is automatically on.</br>
 
 notice how in this example the $a variable is not changing because of the o modifier
 ```perl
