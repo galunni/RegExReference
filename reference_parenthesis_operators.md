@@ -55,6 +55,7 @@ right position for the substitution.
 
 **(?!...)	- negative lookahead**</br>
 negative match but do not consume</br>
+```perl
 echo "Max Mad" | perl -pe 's/Max(?! Good)/Marc/g;'     # output: Marc Mad
 ```
 
