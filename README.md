@@ -9,7 +9,7 @@ Regular Expressions reference and tools
 
 ---
 
-**reference_chars_soft.md** code examples for the following meta character:</br>
+**reference_chars_soft.md code examples for the following meta character:**</br>
 - . single dot
 - \ escape chars
 - \w alphanumeric char
@@ -29,7 +29,7 @@ Regular Expressions reference and tools
 - \Q....\E Literal text span
 
 
-**reference_modifiers.md** code examples for the following regex modifiers:</br>
+**reference_modifiers.md code examples for the following regex modifiers:**</br>
 - g global match
 - i	ignore case
 - s single line
@@ -40,7 +40,7 @@ Regular Expressions reference and tools
 - c in gc keeps the current position during repeated matching
 - \G start of match / end of previous match
 
-**reference_parenthesis_operators.md** code examples for the following parenthesis operators:</br>
+**reference_parenthesis_operators.md code examples for the following parenthesis operators:**</br>
 - (?:...) - turn off backreferences
 - (?modifier-modifier) - turn on/off modifier
 - (?modifier-modifier:....) - modifier span
@@ -54,6 +54,12 @@ Regular Expressions reference and tools
 - (?if then|else) - conditional
 - (?>...) - atomic grouping
 
-
-
+**reference_quantifiers.md code examples for the following quantifiers** 
+- * some, one or no one
+- ? one or no one
+- + one or some
+- { } a number of {exactly} {min,max} {min,}
+- ( ) delimit the value of a quantifier
+- *? +? ?? {min,max}? lazy quantifiers
+- ?+ ++ *+ {min,max}+ possessive quantifiers
 
