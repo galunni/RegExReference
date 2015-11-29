@@ -177,7 +177,7 @@ echo "AbC" | perl -pe 's/A\lBC/X/;' #output: X
 ---
 
 ***\Q....\E	- Literal text span***<br/>
-\Q turns off every metachar, until \E - Supported only by java and perl - VB uses Regex.escape method instead
+\Q turns off every metachar, until \E - Supported only by java and perl - VB uses Regex escape method instead
 ```perl
 echo "[" | perl -pe 's/\Q[/X/;' # output: X
 echo "[g" | perl -pe 's/\Q[\E[a-z]*/X/;' # output: X
