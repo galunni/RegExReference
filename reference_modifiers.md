@@ -112,7 +112,7 @@ print $_;
 **c in gc - keeps the current position during repeated matching**</br>
 
 ```perl
-# notice how in this case using gc mofifier after the first regex the pos() is setted to 4 and
+# notice how in this case using the gc mofifier after the first regex the pos() is setted to 4 and
 # how the second regex only outputs one "a" (the last one in the string)
 echo "mamma" |
 perl -ne 'while(/m/gc) {print $& . pos() . "-";} print "after: " . pos() . "\n"; while(/a/g) {print $&;}'
@@ -121,8 +121,8 @@ perl -ne 'while(/m/gc) {print $& . pos() . "-";} print "after: " . pos() . "\n";
 ```
 
 ```perl
-# notice in this case without the gc modifier the pos() after the first regex is unset
-# and the second regex matches two times an a because in starts matching from the beginning of the string
+# in this case without the gc modifier the pos() after the first regex is not setted
+# and the second regex starts matching from the beginning of the string finding a two times
 echo "mamma" |
 perl -ne 'while(/m/g) {print $& . pos() . "-";} print "after: " . pos() . "\n"; while(/a/g) {print $&;}'
 # output: m1-m3-m4-after: 
