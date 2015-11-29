@@ -19,7 +19,7 @@ Regular Expressions reference and tools
 - ^ \A begin of a line
 - $ \Z \z end of a line/string
 - | alternate
-- [ ] char class
+- \[ \] char class
 - ^ negative class
 - \W not alphanumeric char
 - \D not a number
