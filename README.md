@@ -81,7 +81,7 @@ code examples of specific regex use in perl</br>
 
 ---
 
-**Other interesting resources:**</br>
+**references / resources:**</br>
 - [Mastering Regular Expressions - The book](http://regex.info/book.html)
 - [RegEx tester with debugging and backtracking](https://regex101.com/)
 - [RegEx tester accepting URL as input](https://www.myregextester.com/)
