@@ -59,13 +59,13 @@ code examples for the following parenthesis operators:</br>
 
 **[reference_quantifiers.md](reference_quantifiers.md)**</br>
 code examples for the following quantifiers</br>
-- * some, one or no one
+- \* some, one or no one
 - ? one or no one
-- + one or some
+- \+ one or some
 - { } a number of {exactly} {min,max} {min,}
 - ( ) delimit the value of a quantifier
-- *? +? ?? {min,max}? lazy quantifiers
-- ?+ ++ *+ {min,max}+ possessive quantifiers
+- *?  +?  ??  {min,max}? lazy quantifiers
+- ?+  ++  *+  {min,max}+ possessive quantifiers
 
 **[reference_perl_operators.md](reference_perl_operators.md)**</br>
 code examples of specific regex use in perl</br>
