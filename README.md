@@ -64,8 +64,8 @@ code examples for the following quantifiers</br>
 - \+ one or some
 - { } a number of {exactly} {min,max} {min,}
 - ( ) delimit the value of a quantifier
-- *?  +?  ??  {min,max}? lazy quantifiers
-- ?+  ++  *+  {min,max}+ possessive quantifiers
+- *? +? ?? {min,max}? lazy quantifiers
+- ?+ ++ *+ {min,max}+ possessive quantifiers
 
 **[reference_perl_operators.md](reference_perl_operators.md)**</br>
 code examples of specific regex use in perl</br>
