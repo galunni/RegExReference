@@ -25,7 +25,7 @@ code examples for the following meta characters:</br>
 - \W not alphanumeric char
 - \D not a number
 - \S not a \s
-- - class defines a range
+- \- inside a class defines a range
 - \l \u fold next character's case
 - \Q....\E Literal text span
 
