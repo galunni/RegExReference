@@ -4,10 +4,11 @@ Regular Expressions reference and tools
 
 ---
 
-**[RegEx tester](http://galunni.github.io/tools/regex_tester.html)**</br>
-**[regex.js](./regex.js)**</br>
+**Software for RegEx testing:**</br>
+**[Test RegExes on your text ](http://galunni.github.io/tools/regex_tester.html)**</br>
+**[sourcecode on GitHub](./regex.js)**</br>
 
-- making use of the javascript regex engine to test a regular expression on a given text input
+- this script is making use of the javascript regex engine to test a regular expression on a given text input
 
 ---
 
