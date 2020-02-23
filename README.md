@@ -4,7 +4,9 @@ Regular Expressions reference and tools
 
 ---
 
+**[RegEx tester](http://galunni.github.io/tools/regex_tester.html)**</br>
 **[regex.js](./regex.js)**</br>
+
 - making use of the javascript regex engine to test a regular expression on a given text input
 
 ---
