@@ -4,7 +4,7 @@ Regular Expressions reference and tools
 
 ---
 
-**[quick javascript Software for RegEx testing ](http://galunni.github.io/tools/regex_tester.html)**</br>
+**[quick javascript Software for RegEx testing ](http://galunni.github.io/tools/regex_tester.html)** - 
 **[view sourcecode on GitHub](./regex.js)**</br>
 
 - this script is making use of the javascript regex engine to test a regular expression on a given text input
@@ -84,7 +84,7 @@ code examples of specific regex use in perl</br>
 ---
 
 **references / resources:**</br>
-- [Mastering Regular Expressions - The book](http://regex.info/book.html)
+- [Mastering Regular Expressions - in my opinion the best book about Regular Expressions](http://regex.info/book.html)
 - [RegEx tester with debugging and backtracking](https://regex101.com/)
 - [RegEx tester accepting URL as input](https://www.myregextester.com/)
 - [RegEx tester for the ruby engine](http://rubular.com/)
