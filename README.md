@@ -84,7 +84,7 @@ code examples of specific regex use in perl</br>
 ---
 
 **references / resources:**</br>
-- [Mastering Regular Expressions - in my opinion the best book about Regular Expressions](http://regex.info/book.html)
+- [Mastering Regular Expressions](http://regex.info/book.html) - in my opinion the best book about Regular Expressions
 - [RegEx tester with debugging and backtracking](https://regex101.com/)
 - [RegEx tester accepting URL as input](https://www.myregextester.com/)
 - [RegEx tester for the ruby engine](http://rubular.com/)
