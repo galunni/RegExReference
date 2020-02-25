@@ -1,6 +1,6 @@
 # RegExReference
 
-Regular Expressions reference and tools
+Regular Expressions reference and tools - PCRE Flavor
 
 ---
 
