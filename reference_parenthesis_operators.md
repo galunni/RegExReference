@@ -16,7 +16,8 @@ echo "abc" | perl -pe 's/a(?#this is just a comment)/A/;'  # output: Abc
 
 **(?:...)	- turn off backreferences**</br>
 do not apply backreference to this pharenthesis (faster)</br>
-helpful when you need grouping, quantifying or alternating and you do not need backreferences</br>
+helpful when you need grouping for quantifying or alternating and you do not need backreferences</br>
+but you want to increase matching speed</br>
 ```perl
 echo "abc" | perl -pe 's/(?:ab|c)/CASA/g;'	 # output: CASACASA
 ```
