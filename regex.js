@@ -21,14 +21,11 @@ function adoptText(){
 function updateResults(){
   if(activeFunction === "match"){
     matchIt(); 
-  }
-  else if(activeFunction === "subst"){
+  } else if(activeFunction === "subst"){
     substituteIt(); 
-  }
-  else if(document.forms.formulario.testo_sub_1.value.length >= 1) {
+  } else if(document.forms.formulario.testo_sub_1.value.length >= 1) {
     substituteIt(); 
-  }
-  else if(document.forms.formulario.testo_match.value.length >= 1) {
+  } else if(document.forms.formulario.testo_match.value.length >= 1) {
     matchIt(); 
   }
 }
@@ -63,7 +60,7 @@ function substituteIt(){
   var r1 = eval("/" + document.forms.formulario.testo_sub_1.value + "/" + getFlags());
   var r2 = document.forms.formulario.testo_sub_2.value;
   document.getElementById("textOutput").innerHTML = 
-    testo.replace(r1, '<b class="subst">' + r2  + '</b>');
+           testo.replace(r1, '<b class="subst">' + r2  + '</b>');
     
   // update bg color of selected method (substitute)
   document.getElementById("subster").style.backgroundColor="#F2DBAE";
